@@ -1,0 +1,9 @@
+[ Address book contact details are as follows : 
+First Name is :Asjad
+Last Name is Azmi
+Address is :madiwala
+City is Banglore
+State is Karnatka
+Zip65008
+Phone number  is 8748835815
+Email id is Asjad@gmail.com]
