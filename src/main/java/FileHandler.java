@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class FileHandler {
     public static void readFromFile()  {
@@ -31,5 +32,18 @@ public class FileHandler {
 
         }
     }
+    public static void gsonWrite() {
+        try {
+            Gson gson = new Gson();
+            File file = new File("src/main/resources/AddressBook.json");
+            FileWriter fileWriter = new FileWriter(file);
+            String jsonString = gson.toJson(AddressBookService.listOfContacts.toArray());
+            System.out.println(jsonString);
+            fileWriter.write(jsonString);
+            fileWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
-}
+    }    }
+
